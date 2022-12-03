@@ -2,6 +2,6 @@
 
 <template>
   <main>
-    <section id="collab-page" class="page-wrapper"><h2>Collab</h2></section>
+    <section id="posts-page" class="page-wrapper"><h2>Posts</h2></section>
   </main>
 </template>

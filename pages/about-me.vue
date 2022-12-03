@@ -1,3 +1,7 @@
 <script setup lang="ts"></script>
 
-<template><div class="page-wrapper">about me</div></template>
+<template>
+  <main>
+    <section id="about-me-page" class="page-wrapper"><h2>About me</h2></section>
+  </main>
+</template>
