@@ -1,5 +1,5 @@
 <template>
-  <header class="sticky top-0 bg-gray-200 py-2">
+  <header class="sticky top-0 bg-dominant-300 py-2">
     <div class="flex justify-between page-wrapper text-sm">
       <h1>
         <NuxtLink to="/">AppHeader</NuxtLink>
