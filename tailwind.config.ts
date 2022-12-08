@@ -18,7 +18,7 @@ export default <Partial<Config>>{
           300: "#edeadc",
         },
         accentRed: "#FF614C",
-        accentGreen: "#BFDC36",
+        accentGreen: "#abc91a",
       },
     },
   },
