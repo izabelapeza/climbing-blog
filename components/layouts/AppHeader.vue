@@ -35,33 +35,11 @@ watch(
       </h1>
       <nav aria-label="primary-navigation" class="hidden md:flex">
         <ul class="flex gap-8">
-          <li
-            :class="
-              route.path === '/beginners'
-                ? 'opacity-100 text-complement-100'
-                : 'opacity-60 hover:opacity-80 transition-all'
-            "
+          <BaseRouterLink href="/beginners">Beginners</BaseRouterLink>
+          <BaseRouterLink href="/technique">Technique</BaseRouterLink>
+          <BaseRouterLink href="/fitness-mobility"
+            >Fitness & Mobility</BaseRouterLink
           >
-            <NuxtLink to="/beginners">Beginners</NuxtLink>
-          </li>
-          <li
-            :class="
-              route.path === '/technique'
-                ? 'opacity-100 text-complement-100'
-                : 'opacity-60 hover:opacity-80 transition-all'
-            "
-          >
-            <NuxtLink to="/technique">Technique</NuxtLink>
-          </li>
-          <li
-            :class="
-              route.path === '/fitness-mobility'
-                ? 'opacity-100 text-complement-100'
-                : 'opacity-60 hover:opacity-80 transition-all'
-            "
-          >
-            <NuxtLink to="/fitness-mobility">Fitness & Mobility</NuxtLink>
-          </li>
         </ul>
       </nav>
       <div class="flex gap-4 items-center">
@@ -85,42 +63,12 @@ watch(
       :class="openMenu ? 'h-[18rem]' : 'h-0'"
     >
       <ul class="grid gap-10 justify-center text-center py-8">
-        <li
-          :class="
-            route.path === '/beginners'
-              ? 'opacity-100 text-complement-100'
-              : 'opacity-60 hover:opacity-80 transition-all'
-          "
+        <BaseRouterLink href="/beginners">Beginners</BaseRouterLink>
+        <BaseRouterLink href="/technique">Technique</BaseRouterLink>
+        <BaseRouterLink href="/fitness-mobility"
+          >Fitness & Mobility</BaseRouterLink
         >
-          <NuxtLink to="/beginners">Beginners</NuxtLink>
-        </li>
-        <li
-          :class="
-            route.path === '/technique'
-              ? 'opacity-100 text-complement-100'
-              : 'opacity-60 hover:opacity-80 transition-all'
-          "
-        >
-          <NuxtLink to="/technique">Technique</NuxtLink>
-        </li>
-        <li
-          :class="
-            route.path === '/fitness-mobility'
-              ? 'opacity-100 text-complement-100'
-              : 'opacity-60 hover:opacity-80 transition-all'
-          "
-        >
-          <NuxtLink to="/fitness-mobility">Fitness & Mobility</NuxtLink>
-        </li>
-        <li
-          :class="
-            route.path === '/contact'
-              ? 'opacity-100 text-complement-100'
-              : 'opacity-60 hover:opacity-80 transition-all'
-          "
-        >
-          <NuxtLink to="/contact">Contact</NuxtLink>
-        </li>
+        <BaseRouterLink href="/contact">Contact</BaseRouterLink>
       </ul>
     </nav>
   </header>
