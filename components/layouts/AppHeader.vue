@@ -61,9 +61,7 @@ onClickOutside(navbarRef, () => {
           "
           @click="openMenu = !openMenu"
         >
-          <figure class="h-5 w-5">
-            <BaseIcon :path="mdiMenu" />
-          </figure>
+          <BaseIcon class="h-5 w-5" :path="mdiMenu" />
         </button>
         <BaseBtn href="/contact">Contact</BaseBtn>
       </div>
