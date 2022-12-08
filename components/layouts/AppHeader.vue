@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useRoute } from "vue-router";
+import { onClickOutside } from "@vueuse/core";
 
 const route = useRoute();
 
@@ -25,10 +26,17 @@ watch(
     if (screenWidth.value >= 768) openMenu.value = false;
   }
 );
+
+// click outside mobile menu
+const navbarRef = ref(null);
+
+onClickOutside(navbarRef, () => {
+  openMenu.value = false;
+});
 </script>
 
 <template>
-  <header class="sticky top-0 bg-dominant-300 py-2">
+  <header class="sticky top-0 bg-dominant-300 py-2" ref="navbarRef">
     <div class="flex justify-between items-center page-wrapper text-sm py-1">
       <h1 class="font-[800] uppercase">
         <NuxtLink to="/">CityMonkey</NuxtLink>
