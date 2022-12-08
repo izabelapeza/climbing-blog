@@ -6,12 +6,14 @@
       </h1>
       <nav aria-label="primary-navigation">
         <ul class="flex gap-4">
-          <li><NuxtLink to="/">Home</NuxtLink></li>
-          <li><NuxtLink to="/posts">Posts</NuxtLink></li>
-          <li><NuxtLink to="/about-me">About me</NuxtLink></li>
-          <li><NuxtLink to="/collab">Collaboration</NuxtLink></li>
+          <li><NuxtLink to="/beginners">Beginners</NuxtLink></li>
+          <li><NuxtLink to="/technique">Technique</NuxtLink></li>
+          <li>
+            <NuxtLink to="/fitness-mobility">Fitness & Mobility</NuxtLink>
+          </li>
         </ul>
       </nav>
+      <NuxtLink to="/contact">Contact</NuxtLink>
     </div>
   </header>
 </template>

@@ -1,7 +1,0 @@
-<script setup lang="ts"></script>
-
-<template>
-  <main>
-    <section id="collab-page" class="page-wrapper"><h2>Collab</h2></section>
-  </main>
-</template>
