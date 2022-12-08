@@ -12,6 +12,7 @@
     "nuxt": "3.0.0"
   },
   "dependencies": {
+    "@mdi/js": "^7.0.96",
     "@vueuse/core": "^9.6.0"
   }
 }

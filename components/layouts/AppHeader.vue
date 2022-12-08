@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useRoute } from "vue-router";
 import { onClickOutside } from "@vueuse/core";
+import { mdiMenu } from "@mdi/js";
 
 const route = useRoute();
 
@@ -60,7 +61,9 @@ onClickOutside(navbarRef, () => {
           "
           @click="openMenu = !openMenu"
         >
-          hamburger
+          <figure class="h-5 w-5">
+            <BaseIcon :path="mdiMenu" />
+          </figure>
         </button>
         <BaseBtn href="/contact">Contact</BaseBtn>
       </div>
@@ -71,12 +74,18 @@ onClickOutside(navbarRef, () => {
       :class="openMenu ? 'h-[18rem]' : 'h-0'"
     >
       <ul class="grid gap-10 justify-center text-center py-8">
-        <BaseRouterLink href="/beginners">Beginners</BaseRouterLink>
-        <BaseRouterLink href="/technique">Technique</BaseRouterLink>
-        <BaseRouterLink href="/fitness-mobility"
+        <BaseRouterLink @click="openMenu = false" href="/beginners"
+          >Beginners</BaseRouterLink
+        >
+        <BaseRouterLink @click="openMenu = false" href="/technique"
+          >Technique</BaseRouterLink
+        >
+        <BaseRouterLink @click="openMenu = false" href="/fitness-mobility"
           >Fitness & Mobility</BaseRouterLink
         >
-        <BaseRouterLink href="/contact">Contact</BaseRouterLink>
+        <BaseRouterLink @click="openMenu = false" href="/contact"
+          >Contact</BaseRouterLink
+        >
       </ul>
     </nav>
   </header>
