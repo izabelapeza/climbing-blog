@@ -6,7 +6,7 @@
 
 <style>
 .page-wrapper {
-  max-width: 1440px;
+  max-width: 1300px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
