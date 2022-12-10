@@ -12,29 +12,48 @@ const author: ComputedRef<Author | undefined> = computed(() => {
 });
 
 const postDate: ComputedRef<string> = computed(() => {
-    let date = new Date(props.post.date * 1000);
-    return date.toLocaleString("en-US", {month: "long", day: "numeric", year: "numeric"})
-})
+  let date = new Date(props.post.date * 1000);
+  return date.toLocaleString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+});
 </script>
 
 <template>
-  <div class="bg-dominant-200 rounded grid overflow-hidden cursor-pointer hover:rotate-[2deg] transition" :class="justifyPhoto === 'top' ? 'grid-cols-1' : 'grid-cols-2'">
-    <div class="bg-dominant-300 w-full" :class="justifyPhoto === 'top' ? 'h-52' : ' h-full'"></div>
+  <div
+    class="bg-dominant-200 rounded grid overflow-hidden cursor-pointer hover:rotate-[2deg] transition"
+    :class="justifyPhoto === 'top' ? 'grid-cols-1' : 'grid-cols-2'"
+  >
+    <div
+      class="bg-dominant-300 w-full"
+      :class="justifyPhoto === 'top' ? 'h-52' : ' h-full'"
+    ></div>
     <div class="px-4 py-4 grid gap-2">
-      <div><span class="rounded-full text-xs bg-accentGreen bg-opacity-20 text-accentGreen px-3 py-1" v-for="tag in post.tags" :key="tag">{{tag}}</span></div>
+      <div>
+        <span
+          class="rounded-full text-sm bg-accentGreen bg-opacity-20 text-accentGreen px-3 py-1"
+          v-for="tag in post.tags"
+          :key="tag"
+          >{{ tag }}</span
+        >
+      </div>
       <h2 class="font-bold text-lg">{{ post.title }}</h2>
-      <p class="text-xs font-light pb-2">
+      <p class="text-sm font-light pb-2">
         {{
           post.lead.length > 200 ? post.lead.slice(0, 200) + "..." : post.lead
         }}
       </p>
-      <p class="border-t pt-2 border-opacity-10 border-complement-200 flex justify-between items-center">
+      <div
+        class="border-t pt-2 border-opacity-10 border-complement-200 flex justify-between items-center"
+      >
         <div class="flex gap-2 items-center">
-            <div class="h-7 w-7 rounded-full bg-dominant-300"></div>
-            <p class="text-xs">{{author?.name}} {{author?.lastname}}</p>
+          <div class="h-7 w-7 rounded-full bg-dominant-300"></div>
+          <p class="text-sm">{{ author?.name }} {{ author?.lastname }}</p>
         </div>
-        <p class="text-xs">{{postDate}}</p>
-      </p>
+        <p class="text-sm">{{ postDate }}</p>
+      </div>
     </div>
   </div>
 </template>

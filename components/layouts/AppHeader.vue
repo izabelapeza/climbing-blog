@@ -37,8 +37,8 @@ onClickOutside(navbarRef, () => {
 </script>
 
 <template>
-  <header class="sticky top-0 bg-dominant-300 py-2" ref="navbarRef">
-    <div class="flex justify-between items-center page-wrapper text-sm py-1">
+  <header class="sticky top-0 bg-dominant-300 py-2 z-50" ref="navbarRef">
+    <div class="flex justify-between items-center page-wrapper py-1">
       <h1 class="font-[800] uppercase">
         <NuxtLink to="/">CityMonkey</NuxtLink>
       </h1>
@@ -63,7 +63,7 @@ onClickOutside(navbarRef, () => {
         >
           <BaseIcon class="h-5 w-5" :path="mdiMenu" />
         </button>
-        <BaseBtn href="/contact">Contact</BaseBtn>
+        <BaseBtn href="/contact" size="sm">Contact</BaseBtn>
       </div>
     </div>
     <nav
