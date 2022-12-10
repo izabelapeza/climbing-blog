@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import HeadingWithShadow from "~~/components/base/HeadingWithShadow.vue";
 import { blogPosts } from "~~/data/blogPosts";
 import { scrollTo } from "~~/utils/functions";
 </script>
@@ -14,7 +15,9 @@ import { scrollTo } from "~~/utils/functions";
         class="w-full h-full bg-gradient-to-b from-dominant-300 flex justify-center items-center"
       >
         <div class="grid gap-4">
-          <h2 class="font-[900] text-4xl md:text-6xl">Discover Bouldering</h2>
+          <h2 class="font-[900] text-4xl md:text-6xl font-serif">
+            Discover Bouldering
+          </h2>
           <BaseBtn
             class="w-[12rem] m-auto md:block hidden"
             size="md"
@@ -30,16 +33,16 @@ import { scrollTo } from "~~/utils/functions";
         </div>
       </div>
     </section>
-    <section
-      id="recent-posts"
-      class="page-wrapper grid gap-4 grid-cols-1 md:grid-cols-3 my-12"
-    >
-      <BasePostCard
-        v-for="index in 3"
-        :key="index"
-        :post="blogPosts[0]"
-        :justifyPhoto="'top'"
-      />
+    <section id="recent-posts" class="page-wrapper my-12">
+      <HeadingWithShadow shadow="Recent Posts">Recent Posts</HeadingWithShadow>
+      <div class="grid gap-4 grid-cols-1 md:grid-cols-3">
+        <BasePostCard
+          v-for="index in 3"
+          :key="index"
+          :post="blogPosts[0]"
+          :justifyPhoto="'top'"
+        />
+      </div>
     </section>
   </main>
 </template>

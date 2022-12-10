@@ -39,7 +39,7 @@ const postDate: ComputedRef<string> = computed(() => {
           >{{ tag }}</span
         >
       </div>
-      <h2 class="font-bold text-lg">{{ post.title }}</h2>
+      <h2 class="font-bold text-lg font-serif">{{ post.title }}</h2>
       <p class="text-sm font-light pb-2">
         {{
           post.lead.length > 200 ? post.lead.slice(0, 200) + "..." : post.lead
