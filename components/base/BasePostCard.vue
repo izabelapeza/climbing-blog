@@ -24,11 +24,11 @@ const postDate: ComputedRef<string> = computed(() => {
 });
 
 const pushToPost = () => {
-  if (props.post.tag === "Beginners")
+  if (props.post.tag === "beginners")
     router.push(`/beginners/${props.post.id}/`);
-  else if (props.post.tag === "Fitness & Mobility")
+  else if (props.post.tag === "fitness-mobility")
     router.push(`/fitness-mobility/${props.post.id}/`);
-  else if (props.post.tag === "Technique")
+  else if (props.post.tag === "technique")
     router.push(`/technique/${props.post.id}/`);
 };
 </script>
