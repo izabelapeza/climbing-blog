@@ -2,6 +2,9 @@
 import { BlogPost } from "~/data/blogPosts";
 import { authors, Author } from "~/data/authors";
 import { ComputedRef } from "vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 
 const props = defineProps<{ post: BlogPost; justifyPhoto: "left" | "top" }>();
 
@@ -19,12 +22,22 @@ const postDate: ComputedRef<string> = computed(() => {
     year: "numeric",
   });
 });
+
+const pushToPost = () => {
+  if (props.post.tag === "Beginners")
+    router.push(`/beginners/${props.post.id}/`);
+  else if (props.post.tag === "Fitness & Mobility")
+    router.push(`/fitness-mobility/${props.post.id}/`);
+  else if (props.post.tag === "Technique")
+    router.push(`/technique/${props.post.id}/`);
+};
 </script>
 
 <template>
   <div
     class="bg-dominant-200 rounded grid overflow-hidden cursor-pointer hover:rotate-[2deg] transition"
     :class="justifyPhoto === 'top' ? 'grid-cols-1' : 'grid-cols-2'"
+    @click="pushToPost"
   >
     <div
       class="bg-dominant-300 w-full"
@@ -34,9 +47,7 @@ const postDate: ComputedRef<string> = computed(() => {
       <div>
         <span
           class="rounded-full text-sm bg-accentGreen bg-opacity-20 text-accentGreen px-3 py-1"
-          v-for="tag in post.tags"
-          :key="tag"
-          >{{ tag }}</span
+          >{{ post.tag }}</span
         >
       </div>
       <h2 class="font-bold text-lg font-serif">{{ post.title }}</h2>
