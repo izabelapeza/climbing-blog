@@ -13,4 +13,16 @@
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #4e596b;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3a4350;
+}
 </style>

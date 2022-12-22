@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-  <main>
+  <main class="max-w-[100vw] overflow-hidden">
     <MainPageWelcomeSection />
     <MainPageRecentPostsSection />
     <MainPageAboutUsSection />
