@@ -1,4 +1,6 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const config = useRuntimeConfig();
+</script>
 
 <template>
   <section
@@ -11,7 +13,7 @@
         background-image: url('/img/maxime-dore-fD2orULc0cY-unsplash.webp');
       "
     ></div>
-    <p class="text-2xl">CityMonkey</p>
+    <p class="text-2xl">{{ config.public.BLOG_NAME }}</p>
     <h2 class="text-5xl font-bold font-serif pt-2 pb-6">Let's cooperate!</h2>
     <p class="text-xl">
       With your valuable products or great services and our top-quality texts

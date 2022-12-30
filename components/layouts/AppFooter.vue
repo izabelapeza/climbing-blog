@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { mdiYoutube, mdiInstagram, mdiFacebook } from "@mdi/js";
+
+const config = useRuntimeConfig();
 </script>
 
 <template>
@@ -7,7 +9,7 @@ import { mdiYoutube, mdiInstagram, mdiFacebook } from "@mdi/js";
     <div class="page-wrapper py-4 grid md:flex md:justify-between gap-5">
       <div class="grid gap-3 md:gap-2">
         <h2 class="font-[800] text-2xl uppercase text-dominant-100">
-          CityMonkey
+          {{ config.public.BLOG_NAME }}
         </h2>
         <div class="flex gap-2">
           <a

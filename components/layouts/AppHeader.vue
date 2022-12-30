@@ -4,6 +4,7 @@ import { onClickOutside } from "@vueuse/core";
 import { mdiMenu } from "@mdi/js";
 
 const route = useRoute();
+const config = useRuntimeConfig();
 
 // check window width
 let screenWidth = ref<number>(0);
@@ -40,7 +41,7 @@ onClickOutside(navbarRef, () => {
   <header class="sticky top-0 bg-dominant-300 py-2 z-50" ref="navbarRef">
     <div class="flex justify-between items-center page-wrapper py-1">
       <h1 class="font-[800] uppercase">
-        <NuxtLink to="/">CityMonkey</NuxtLink>
+        <NuxtLink to="/">{{ config.public.BLOG_NAME }}</NuxtLink>
       </h1>
       <nav aria-label="primary-navigation" class="hidden md:flex">
         <ul class="flex gap-8">

@@ -1,5 +1,11 @@
 <script setup lang="ts">
 import { mdiEmailOutline } from "@mdi/js";
+
+const config = useRuntimeConfig();
+
+const email = computed(() => {
+  return `collab@${config.public.BLOG_NAME.toLowerCase()}.com`;
+});
 </script>
 
 <template>
