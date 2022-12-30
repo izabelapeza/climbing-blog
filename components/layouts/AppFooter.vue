@@ -48,7 +48,7 @@ import { mdiYoutube, mdiInstagram, mdiFacebook } from "@mdi/js";
             <BaseRouterLink href="/fitness-mobility"
               >Fitness & Mobility</BaseRouterLink
             >
-            <BaseRouterLink href="/contact">Contact</BaseRouterLink>
+            <BaseRouterLink href="/collaboration">Collaboration</BaseRouterLink>
           </ul>
         </nav>
       </div>

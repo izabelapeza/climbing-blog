@@ -14,6 +14,15 @@
   padding-right: 0.75rem;
 }
 
+.page-wrapper-narrow {
+  max-width: 900px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }

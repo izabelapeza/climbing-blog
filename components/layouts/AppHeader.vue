@@ -63,7 +63,7 @@ onClickOutside(navbarRef, () => {
         >
           <BaseIcon class="h-5 w-5" :path="mdiMenu" />
         </button>
-        <BaseBtn href="/contact" size="sm">Contact</BaseBtn>
+        <BaseBtn href="/collaboration" size="sm">Collaboration</BaseBtn>
       </div>
     </div>
     <nav
@@ -81,8 +81,8 @@ onClickOutside(navbarRef, () => {
         <BaseRouterLink @click="openMenu = false" href="/fitness-mobility"
           >Fitness & Mobility</BaseRouterLink
         >
-        <BaseRouterLink @click="openMenu = false" href="/contact"
-          >Contact</BaseRouterLink
+        <BaseRouterLink @click="openMenu = false" href="/collaboration"
+          >Collaboration</BaseRouterLink
         >
       </ul>
     </nav>
