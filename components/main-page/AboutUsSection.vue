@@ -13,7 +13,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="about-us" class="page-wrapper my-20">
+  <section id="about-us" class="page-wrapper my-20 md:my-32">
     <div
       class="grid grid-cols-1 md:grid-cols-2 items-center gap-6 about-us-heading opacity-0 transition-all duration-1000"
     >

@@ -16,7 +16,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="recent-posts" class="page-wrapper my-12">
+  <section id="recent-posts" class="page-wrapper my-20">
     <HeadingWithShadow
       shadow="Recent Posts"
       class="recent-posts-heading opacity-0 transition-all duration-700"
