@@ -64,7 +64,9 @@ onClickOutside(navbarRef, () => {
         >
           <BaseIcon class="h-5 w-5" :path="mdiMenu" />
         </button>
-        <BaseBtn href="/collaboration" size="sm">Collaboration</BaseBtn>
+        <BaseBtn size="sm"
+          ><NuxtLink to="/collaboration">Collaboration</NuxtLink></BaseBtn
+        >
       </div>
     </div>
     <nav

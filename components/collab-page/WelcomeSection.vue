@@ -3,10 +3,7 @@ const config = useRuntimeConfig();
 </script>
 
 <template>
-  <section
-    id="collab-welcome"
-    class="page-wrapper-narrow text-center max-width-"
-  >
+  <section id="collab-welcome" class="page-wrapper-narrow text-center">
     <div
       class="bg-cover bg-center min-h-[16rem] w-[95%] rounded rotate-[2deg] mb-6"
       style="
