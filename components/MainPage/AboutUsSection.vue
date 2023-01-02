@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import HeadingWithShadow from "~~/components/base/HeadingWithShadow.vue";
+import HeadingWithShadow from "~~/components/Base/HeadingWithShadow.vue";
 import createIntersectionObserver from "~~/utils/intersectionObserver";
 
 onMounted(() => {
