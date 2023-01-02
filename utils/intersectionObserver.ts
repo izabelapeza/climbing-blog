@@ -1,16 +1,20 @@
-const createIntersectionObserver = (htmlTag: string, animatedClass: string) => {
+const createIntersectionObserver = (
+  htmlTag: string,
+  animatedClass?: string,
+  callback?: () => void
+) => {
   let target: NodeListOf<Element>;
 
-  const callback = function (entries: IntersectionObserverEntry[]) {
+  const defaultCallback = function (entries: IntersectionObserverEntry[]) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        target.forEach((el) => el.classList.add(animatedClass));
+        target.forEach((el) => el.classList.add(animatedClass || ""));
       }
     });
   };
 
   let observer: IntersectionObserver;
-  observer = new IntersectionObserver(callback);
+  observer = new IntersectionObserver(callback ? callback : defaultCallback);
 
   setTimeout(() => {
     target = document.querySelectorAll(htmlTag);
